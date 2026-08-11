@@ -2,6 +2,8 @@ body,
 html {
   height: 100%;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .container {
@@ -45,4 +47,32 @@ html {
   font-family: sans-serif;
   color: white;
   text-align: left;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 24.4%);
+  grid-template-rows: repeat(7, 13%);
+  gap: 15px;
+}
+
+.header {
+  grid-column: 1 / span 4;
+}
+
+.sidebar {
+  grid-row: 2 / span 5;
+}
+
+.nav {
+  grid-column: 2 / span 3;
+}
+
+.article {
+  grid-row: 3 / span 4;
+  grid-column: 2 / span 3;
+}
+
+.footer {
+  grid-column: span 4;
 }
